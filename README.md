@@ -3,8 +3,8 @@
 # </p>
 
 <p align="center">
-   <img src="https://github.com/InoshMatheesha/WordlistGenarator/blob/main/icon.png" alt="Wordlist Generator icon" width="64" style="vertical-align:middle; margin-right:12px;" />
-   <span style="font-family: 'Courier New', monospace; font-size:30px; font-weight:700; vertical-align:middle;">Wordlist Generator</span>
+   <img src="https://github.com/InoshMatheesha/WordlistGenarator/blob/main/icon.png" alt="Wordlist Generator icon" width="64" style="vertical-align:middle; margin-right:12px;" /><div>
+   <span style="font-family: 'Courier New', monospace; font-size:30px; font-weight:700; vertical-align:middle;">Wordlist Generator</span></div>
    <br/>
    <em style="color:#666;">Generate focused offline wordlists for authorized security testing.</em>
 </p>
