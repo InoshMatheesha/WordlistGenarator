@@ -1,9 +1,9 @@
 # <p align="center">
-#   <img src="assets/banner.png" alt="Wordlist Generator banner" style="max-width:100%; height:auto;" />
+#   <img src="https://github.com/InoshMatheesha/WordlistGenarator/blob/main/banner.png" alt="Wordlist Generator banner" style="max-width:100%; height:auto;" />
 # </p>
 
 <p align="center">
-   <img src="assets/icon.png" alt="Wordlist Generator icon" width="64" style="vertical-align:middle; margin-right:12px;" />
+   <img src="https://github.com/InoshMatheesha/WordlistGenarator/blob/main/icon.png" alt="Wordlist Generator icon" width="64" style="vertical-align:middle; margin-right:12px;" />
    <span style="font-family: 'Courier New', monospace; font-size:30px; font-weight:700; vertical-align:middle;">Wordlist Generator</span>
    <br/>
    <em style="color:#666;">Generate focused offline wordlists for authorized security testing.</em>
