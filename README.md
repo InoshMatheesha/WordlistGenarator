@@ -3,37 +3,22 @@
 # </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=900&size=38&duration=3000&pause=800&color=00FF9C&center=true&vCenter=true&width=650&height=70&lines=🔐+CipherSeed;🌱+Generate.+Mutate.+Crack.;⚡+Harvest+Passwords+with+Precision" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=45&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=600&height=70&lines=%F0%9F%94%92+CipherSeed" alt="CipherSeed" />
 </p>
 
 <p align="center">
-  <strong>Wordlist mutation engine for penetration testing, password profiling & cyber forensics.</strong>
-</p>
-
-<br>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Platform-CLI-black?style=for-the-badge&logo=linux" />
-  <img src="https://img.shields.io/badge/Mode-Offensive%20Security-darkred?style=for-the-badge&logo=kalilinux" />
-  <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" />
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=00FF9C&height=2" />
+  <strong>Generate cryptographic wordlists for penetration testing & security research</strong>
 </p>
 
 <p align="center">
-  <i>🌿 Plant patterns • 🌾 Grow logic • 🔓 Harvest credentials</i><br>
-  <i>🧬 Human patterns → Password intelligence → Attack-ready lists</i>
+  <i>⚡ Plant patterns • Harvest passwords • Secure systems</i>
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=00FF9C&height=2" />
+  <img src="https://img.shields.io/badge/Platform-CLI-purple?style=for-the-badge" alt="Platform">
+  <img src="https://img.shields.io/badge/Security-PenTest-red?style=for-the-badge" alt="Security">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge" alt="Python">
 </p>
-
 
 ---
 
