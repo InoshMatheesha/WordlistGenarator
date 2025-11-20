@@ -79,21 +79,25 @@ def count_filtered_combinations(words, min_length, max_length):
     # Count matching combinations
     count = 0
     
-    # Check all permutations of words (different orders)
-    for perm in itertools.permutations(range(len(words))):
-        # Get variations for this order
-        ordered_variations = [all_variations[i] for i in perm]
-        
-        # Count combinations with this order
-        for combo in itertools.product(*ordered_variations):
-            for addition in additions:
-                # Combine all words and add number/symbol
-                password = ''.join(combo) + addition
-                
-                # Check if password length is in range
-                password_length = len(password)
-                if password_length >= min_length and password_length <= max_length:
-                    count = count + 1
+    # Try different numbers of words (1 word, 2 words, 3 words, etc.)
+    for num_words in range(1, len(words) + 1):
+        # Get all combinations of that many words
+        for word_combo in itertools.combinations(range(len(words)), num_words):
+            # Get variations for selected words
+            selected_variations = [all_variations[i] for i in word_combo]
+            
+            # Try all permutations (different orders)
+            for perm in itertools.permutations(selected_variations):
+                # Count combinations
+                for combo in itertools.product(*perm):
+                    for addition in additions:
+                        # Combine words and add number/symbol
+                        password = ''.join(combo) + addition
+                        
+                        # Check if password length is in range
+                        password_length = len(password)
+                        if password_length >= min_length and password_length <= max_length:
+                            count = count + 1
     
     return count
 
@@ -112,32 +116,40 @@ def generate_wordlist(words, count, min_length, max_length):
     
     # Generate combinations
     generated = []
+    generated_set = set()  # Track unique passwords
     generated_count = 0
     
-    # Generate all permutations of words (different orders)
-    for perm in itertools.permutations(range(len(words))):
-        # Get variations for this order
-        ordered_variations = [all_variations[i] for i in perm]
-        
-        # Generate combinations with this order
-        for combo in itertools.product(*ordered_variations):
-            for addition in additions:
-                # Combine all words and add number/symbol
-                password = ''.join(combo) + addition
-                
-                # Check if password length is in range
-                password_length = len(password)
-                if password_length >= min_length and password_length <= max_length:
-                    generated.append(password)
-                    generated_count += 1
-                    
-                    # Show progress every 10000 passwords
-                    if generated_count % 10000 == 0:
-                        print(f"Generated: {generated_count} passwords...")
-                    
-                    # Stop if we reached the count
-                    if generated_count >= count:
-                        return generated
+    # Try different numbers of words (1 word, 2 words, 3 words, etc.)
+    for num_words in range(1, len(words) + 1):
+        # Get all combinations of that many words
+        for word_combo in itertools.combinations(range(len(words)), num_words):
+            # Get variations for selected words
+            selected_variations = [all_variations[i] for i in word_combo]
+            
+            # Try all permutations (different orders)
+            for perm in itertools.permutations(selected_variations):
+                # Generate combinations
+                for combo in itertools.product(*perm):
+                    for addition in additions:
+                        # Combine words and add number/symbol
+                        password = ''.join(combo) + addition
+                        
+                        # Check if password length is in range
+                        password_length = len(password)
+                        if password_length >= min_length and password_length <= max_length:
+                            # Check if password is unique
+                            if password not in generated_set:
+                                generated.append(password)
+                                generated_set.add(password)
+                                generated_count += 1
+                                
+                                # Show progress every 10000 passwords
+                                if generated_count % 10000 == 0:
+                                    print(f"Generated: {generated_count} passwords...")
+                                
+                                # Stop if we reached the count
+                                if generated_count >= count:
+                                    return generated
     
     return generated
 
@@ -175,21 +187,7 @@ def main():
     
     # Calculate possible combinations
     total_combinations = calculate_combinations(words)
-    print(f"\nTotal possible combinations: {total_combinations:,}")
-    
-    # Ask how many user wants
-    while True:
-        try:
-            count = int(input("\nHow many passwords do you want to generate? "))
-            if count <= 0:
-                print("Please enter a positive number")
-                continue
-            if count > total_combinations:
-                print(f"Maximum available is {total_combinations:,}")
-                count = total_combinations
-            break
-        except ValueError:
-            print("Please enter a valid number")
+    print(f"\nPossible combinations (ALL): {total_combinations:,}")
     
     # Ask for password length range
     while True:
@@ -211,10 +209,19 @@ def main():
     filtered_count = count_filtered_combinations(words, min_length, max_length)
     print(f"Possible combinations (length {min_length}-{max_length}): {filtered_count:,}")
     
-    # Adjust count if needed
-    if count > filtered_count:
-        print(f"Adjusting to maximum available: {filtered_count:,}")
-        count = filtered_count
+    # Ask how many user wants
+    while True:
+        try:
+            count = int(input("\nHow many passwords do you want to generate? "))
+            if count <= 0:
+                print("Please enter a positive number")
+                continue
+            if count > filtered_count:
+                print(f"Maximum available is {filtered_count:,}")
+                count = filtered_count
+            break
+        except ValueError:
+            print("Please enter a valid number")
     
     # Generate wordlist
     wordlist = generate_wordlist(words, count, min_length, max_length)
