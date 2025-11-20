@@ -3,7 +3,7 @@
 # </p>
 
 <p align="center">
-   <span style="font-family: 'Courier New', monospace; font-size:30px; font-weight:700; vertical-align:middle;">Wordlist Generator</span>
+   <b1><span style="font-family: 'Courier New', monospace; font-size:30px; font-weight:700; vertical-align:middle;">Wordlist Generator</span></b1>
    <br/>
    <em style="color:#666;">Generate focused offline wordlists for authorized security testing.</em>
 </p>
