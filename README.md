@@ -3,14 +3,32 @@
 # </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=50&duration=3000&pause=1000&color=00F728&center=true&vCenter=true&width=600&height=80&lines=WORDLIST+GENERATOR" alt="Wordlist Generator" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=900&size=45&duration=3000&pause=1000&color=7C3AED&center=true&vCenter=true&width=600&height=70&lines=%F0%9F%94%92+CipherSeed" alt="CipherSeed" />
 </p>
 
 <p align="center">
-  <b>Generate focused offline wordlists for authorized security testing</b>
+  <b>Generate cryptographic wordlists for authorized security testing</b>
 </p>
 
 <br/>
+
+<p align="center">
+  <h1 align="center">🔐 CipherSeed</h1>
+</p>
+
+<p align="center">
+  <strong>Generate cryptographic wordlists for penetration testing & security research</strong>
+</p>
+
+<p align="center">
+  <i>⚡ Plant patterns • Harvest passwords • Secure systems</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-CLI-purple?style=for-the-badge" alt="Platform">
+  <img src="https://img.shields.io/badge/Security-PenTest-red?style=for-the-badge" alt="Security">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge" alt="Python">
+</p>
 
 ---
 
