@@ -7,16 +7,6 @@
 </p>
 
 <p align="center">
-  <b>Generate cryptographic wordlists for authorized security testing</b>
-</p>
-
-<br/>
-
-<p align="center">
-  <h1 align="center">🔐 CipherSeed</h1>
-</p>
-
-<p align="center">
   <strong>Generate cryptographic wordlists for penetration testing & security research</strong>
 </p>
 
